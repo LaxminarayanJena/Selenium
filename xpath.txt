@@ -1,0 +1,98 @@
+
+//span[(@class='iceOutTxt iceMnuItmLabel') and contains (text(),'Save')]
+
+//span[(@class='iceOutTxt') and (text()='Billing Info')]
+
+//*[text()[contains(.,'Copy Primary Address')])
+
+
+//*[contains(text(),'Create']
+
+
+//input[(@type='submit')]
+
+//*[text()='Quote']//ancestor::a[1]
+
+//*[text()='Total']//following::td[2]//child::span[1]
+//*[text()='Total']//preceding-sibling::input[2]
+
+
+//input[contains(@name,'abc')]
+
+//input[contains(@id,'mai')][@name='Email']
+
+.//*[@id='Email']//..
+
+
+//form[@id='gaia_loginform']/input[starts-with(@id,'profile')]
+
+//tr[(@class='icePnlGrdRow2') and contains (text(),'Agreed')] 
+
+//img[(@src='/PHYLINSPortlet/images/override-0.gif')]
+
+//input[(@name='_PHYLINSPort')]
+
+
+-------------------------------------------------chrome--------
+
+$x("//input[@id='searchInput]")
+$x("//input[@id='searchInput][@name='search']")
+d
+
+-----------------csss-------
+
+
+input#Email
+
+1)no //
+2)no @, id
+
+$$("#searchInput")- to inspect in chrome
+
+<label class="hidden-label" for-"Email">enter mail</label>
+ 
+.hidden-label[for='Email']
+
+
+for every clss there should be a dot
+.card.signin-card.pre-shift.no-name
+
+.card.signin-card.pre-shift.no-name>form
+
+css only forward not backward
+css faster
+
+.card.signin-card.pre-shift.no-name>div:first-child
+
+.card.signin-card.pre-shift.no-name>div:nth-child(2)
+.card.signin-card.pre-shift.no-name>form:last-child 
+
+input[id*='mai'][name='Email']
+^-starts with
+$-ends with
+*-contains
+-------preference--------
+id
+name
+css
+xpath
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

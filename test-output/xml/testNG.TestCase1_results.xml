@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LoginTest"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.015">
+  <properties />
+  
+  
+            <testcase name="doLogin" time="0.012" classname="testNG.TestCase1" />
+                <testcase name="composeEmail" time="0.003" classname="testNG.TestCase1" />
+      
+</testsuite>

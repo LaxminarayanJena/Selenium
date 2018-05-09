@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="listeners.CustomListeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="ValidateTitleTest(failed)">
+    <groups>
+      <run>
+        <include name="low"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNG.TestCase2">
+        <methods>
+          <include name="validateTitles"/>
+        </methods>
+      </class> <!-- testNG.TestCase2 -->
+    </classes>
+  </test> <!-- ValidateTitleTest(failed) -->
+  <test name="DependencyTest(failed)">
+    <groups>
+      <run>
+        <include name="low"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNG.TestCase3">
+        <methods>
+          <include name="composeEmail"/>
+          <include name="doLogin"/>
+        </methods>
+      </class> <!-- testNG.TestCase3 -->
+    </classes>
+  </test> <!-- DependencyTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

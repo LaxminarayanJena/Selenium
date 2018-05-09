@@ -1,0 +1,29 @@
+mysql> create database 11sept;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use 11sept;
+Database changed
+mysql> create table selenium (
+     tutorial_id INT NOT NULL AUTO_INCREMENT,
+    tutorial_title VARCHAR(100) NOT NULL,
+    tutorial_author VARCHAR(40) NOT NULL,
+    submission_date DATE,
+    PRIMARY KEY(tutorial_id)
+    );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into selenium values (2,"testing","tom",now());
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select * from selenium;
++-------------+----------------+-----------------+-----------------+
+| tutorial_id | tutorial_title | tutorial_author | submission_date |
++-------------+----------------+-----------------+-----------------+
+|           2 | testing        | tom             | 2016-10-30      |
++-------------+----------------+-----------------+-----------------+
+1 row in set (0.00 sec)
+
+mysql> select tutorial_author from selenium where tutorial_id =2;
++-----------------+
+| tutorial_author |
++-----------------+
