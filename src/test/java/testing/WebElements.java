@@ -36,7 +36,8 @@ public class WebElements {
 
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://gmail.com");
-		driver.navigate().to("http://gmail.com");
+		driver.navigate().to("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+		
 		//we can navigate forward, backward using navigate instead of get
 		
 		driver.manage().window().maximize();
@@ -58,36 +59,47 @@ public class WebElements {
 		 
 		
 
-		WebElement email = driver.findElement(By.xpath(".//*[@id='Email']"));
+		
+		WebElement email = driver.findElement(By.xpath(".//*[@id='identifierId']"));
 		// By is a class and it contains id,name,linkText which are static
 		// methods present in By classand we can call directly
 		// String email throws eror
 		// findElement is returning WebElement Type so we storing as WebElement
 		// webElement is an interface
-		driver.findElement(By.xpath(".//*[@id='Email']")).sendKeys("lnarayan.jena@gmail.com");
+		driver.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("lnarayan.jena@gmail.com");
 		// findElement is returning WebElement so we can use its methods
 		// directly also		
-		driver.findElement(By.xpath(".//*[@id='next']")).click();
-		//Thread.sleep(2000);  //Hard coded wait
-		driver.findElement(By.xpath(".//*[@id='Passwd']")).sendKeys("ffff");
-		driver.findElement(By.xpath(".//*[@id='signIn']")).click();
-		System.out.print(driver.findElement(By.xpath(".//*[@id='errormsg_0_Passwd']")).getText());
+		driver.findElement(By.xpath(".//*[@id='identifierNext']")).click();
+		
+		
+		driver.findElement(By.xpath(".//*[@id='password']/div[1]/div/div[1]/input")).sendKeys("ffff");
+		Thread.sleep(1500);
+		driver.findElement(By.xpath(".//*[@id='passwordNext']")).click();
+		
+		
+		
+		Thread.sleep(2000);  //Hard coded wait  otherwise text will not be printed
+		//wait should be added when page is not loading but element changes
+				//ex- auto suggestion in google, password after next button in gmail ajax,jquery,angular etc
+				
+				//-------------intresting example-----
+				/*implicit wait doesnot work for wrong username text. only thread.sleep works 
+				becuase wrong username text already present in dom. its a hidden element and not visible
+				implicit wait works for presence of element not visibility of element
+				
+				we have to use explicit wait 
+				
+				*/
+		
+		System.out.print(driver.findElement(By.xpath(".//*[@id='password']/div[2]/div[2]")).getText());
 
 		
-		//wait should be added when page is not loading but element changes
-		//ex- auto suggestion in google, password after next button in gmail ajax,jquery,angular etc
 		
-		//-------------intresting example-----
-		/*implicit wait doesnot work for wrong username text. only thread.sleep works 
-		becuase wrong username text already present in dom. its a hidden element and not visible
-		implicit wait works for presence of element not visibility of element
-		
-		we have to use explicit wait 
-		
-		*/
 		
 		//driver.close();//close current window
-		driver.quit();//close all windows
+		//driver.quit();//close all windows
 	}
 
-}
+	}
+
+
