@@ -34,6 +34,8 @@
 
 
 -------------------------------------------------chrome--------
+ctrl + f
+
 
 $x("//input[@id='searchInput]")
 $x("//input[@id='searchInput][@name='search']")
