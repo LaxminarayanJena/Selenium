@@ -6,7 +6,7 @@
 //*[text()[contains(.,'Copy Primary Address')])
 
 
-//*[contains(text(),'Create']
+//*[contains(text(),'Create')]
 
 
 //input[(@type='submit')]
