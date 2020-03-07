@@ -15,6 +15,8 @@
 
 //*[text()='Total']//following::td[2]//child::span[1]
 //*[text()='Total']//preceding-sibling::input[2]
+//*[text()='Total']//following-sibling::td[1]
+
 //a[@context='contact' and contains(text(),'Tom Peter')]//parent::td[1]//preceding::td[1]//input
 
 //input[contains(@name,'abc')]
