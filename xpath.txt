@@ -7,7 +7,7 @@
 
 
 //*[contains(text(),'Create')]
-
+//option[contains(text(),'a')][6]
 
 //input[(@type='submit')]
 
