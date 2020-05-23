@@ -20,6 +20,17 @@ public class TabsAndPopUps {
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath(".//*[@id='cee_closeBtn']/img")).click();
 
+		/*------------	NEW CODE----------
+		Set<String> handles=driver.getWindowHandles();
+		ArrayList<String> ar= new ArrayList<String>(handles);
+		System.out.print(ar);
+		driver.switchTo().window(ar.get(2));
+		
+		
+		
+		
+		
+		*/
 		System.out.println("------------printing first window id----------");
 		Set<String> winids = driver.getWindowHandles();
 		//Set is like list but stores unique values		
