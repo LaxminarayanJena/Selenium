@@ -6,7 +6,8 @@
 //*[text()[contains(.,'Copy Primary Address')])
 
 
-//*[contains(text(),'Create')]
+
+//*[contains(text(),'Alabama')]//following::td[position()=2]
 //option[contains(text(),'a')][6]
 //option[contains(text(),'a')][last()]
 
