@@ -1,5 +1,5 @@
 
-//span[(@class='iceOutTxt iceMnuItmLabel') and contains (text(),'Save')]
+//a[@role='menuitem' and contains(text(),'Claims & Objections')]
 
 //span[(@class='iceOutTxt') and (text()='Billing Info')]
 
