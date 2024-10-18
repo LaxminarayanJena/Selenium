@@ -1,3 +1,5 @@
+atomic value-
+//book[price > 20] 
 
 //a[@role='menuitem' and contains(text(),'Claims & Objections')]
 
